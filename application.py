@@ -32,11 +32,11 @@ from lib.loader import Loader
 from lib.session import Session, SessionManager
 from jinja2 import Environment, FileSystemLoader
 
-define("port", default = 80, help = "run on the given port", type = int)
-define("mysql_host", default = "mysql_host", help = "community database host")
-define("mysql_database", default = "mysql_db_name", help = "community database name")
-define("mysql_user", default = "mysql_db_user", help = "community database user")
-define("mysql_password", default = "mysql_db_password", help = "community database password")
+define("port", default = 8099, help = "run on the given port", type = int)
+define("mysql_host", default = "127.0.0.1", help = "community database host")
+define("mysql_database", default = "f2e", help = "community database name")
+define("mysql_user", default = "root", help = "community database user")
+define("mysql_password", default = "123456", help = "community database password")
 
 class Application(tornado.web.Application):
     def __init__(self):
